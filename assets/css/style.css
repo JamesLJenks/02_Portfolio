@@ -4,18 +4,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: black;
-}
-
-body {
-    background-color: black;
 }
 
 h1 {
     font-family: "Montserrat", sans-serif;
     font-weight: 00;
     font-size: 50px;
-    color: #ecf0f1;
     text-decoration: none;
 }
 
@@ -23,7 +17,6 @@ h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 30px;
-    color: #ecf0f1;
     text-decoration: none;
 }
 
@@ -31,14 +24,12 @@ h3 {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 18px;
-    color: #ecf0f1;
     text-decoration: none;
 }
 
 p {
     font-family: "Montserrat", sans-serif;
-    font-weight: 400; 
-    color: #ecf0f1;
+    font-weight: 400;
 }
 
 li, a, button {
@@ -50,6 +41,7 @@ li, a, button {
     text-transform: uppercase;
 }
 
+/* Site Header */
 header {
     width: 100%;
     display: flex;
@@ -57,9 +49,10 @@ header {
     align-items: center;
     padding: 30px 10%;
     background-color: #24252a;
-    position: fixed;
+    /* position: fixed; */
 }
 
+/* Logo */
 .logo {
     cursor: pointer;
     margin-right: auto;
@@ -78,6 +71,7 @@ header {
     font-weight: 700;
 }
 
+/* Header Navigation */
 .nav-links {
     list-style: none;
 }
@@ -109,45 +103,137 @@ button:hover {
     background-color: rgba(0,136,169,0.8);
 }
 
+/* Hero */
 .banner-area {
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 100vh;
     background: rgba(0,136,169,1);
 }
 
-.content {
+.banner-content-area {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Content */
+.main-content-area {
+    display: flex;
+    justify-content: center;
     width: 100%;
     display: inline-block;
 }
 
-#services {
+/* Section 1: Services */
+.services {
     width: 100%;
-    height: 500px;
-    background-color: orange;
+    height: inherit;
 }
 
-#about {
-    width: 100%;
-    height: 600px;
+.what-i-do {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
-#projects {
+.services-items {
     width: 100%;
-    height: 1400px;
+    height: auto;
+    background-color: #ecf0f1;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
+.services-items h2, h3, p {
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.item-container {
+    padding: 0 20px 80px 30px;
+}
+
+.item-heading {
+    color: #0088a9;
+}
+
+.item-description {
+    text-align: center;
+}
+
+.center {
+    display: block;
+    margin: auto auto 10px auto;
+
+}
+
+/* Section 2: About */
+.about-section {
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+
+.about-section p {
+    color:#ecf0f1;
+}
+
+.about-heading {
+    display: flex;
+    justify-content: flex-start;
+    color:#ecf0f1;
+    padding: 150px 60px 0 60px;
+}
+
+.about-container {
+    padding: 30px 60px 150px 60px;
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Section 3: Projects */
+.portfolio-projects {
+    height: 800px;
+    width: 100%;
+    background-color: #24252a;
+}
+
+.projects-heading {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0 60px 0;
+    color: #ecf0f1;
+}
+
+.portfolio-projects h3 {
+    color: #0088a9;
+}
+
+/* Section 4: Contact */
 #contact {
     width: 100%;
-    height: 350px;
+    height: 150px;
 }
 
+/* Footer */
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 10%;
+    background-color: #0088a9;
 }
 
+/* Footer Navigation */
 .footer-nav ul li {
     display: flex;
     justify-content: space-around;
@@ -157,4 +243,5 @@ footer {
     font-family: "Montserrat", sans-serif;
     font-size: 12px;
     font-weight: 400;
+    color: #ecf0f1;
 }

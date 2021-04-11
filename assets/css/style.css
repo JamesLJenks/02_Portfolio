@@ -123,7 +123,7 @@ button:hover {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(0,136,169,0.85), rgba(0, 59, 39, 0.85)), url("/Homework/02_Portfolio/assets/images/Keyboard.jpg");
+    background: linear-gradient(rgba(0,136,169,0.85), rgba(0, 59, 39, 0.85)), url("../images/Keyboard.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -306,31 +306,31 @@ button:hover {
 
 /* Portfolio Card Images */
 #card-1 {
-    background-image: url("/Homework/02_Portfolio/assets/images/Up-North.jpg");
+    background-image: url("../images/Up-North.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #card-2 {
-    background-image: url("/Homework/02_Portfolio/assets/images/MM-Website.jpg");
+    background-image: url("../images/MM-Website.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #card-3 {
-    background-image: url("/Homework/02_Portfolio/assets/images/Oaken-Shield.jpg");
+    background-image: url("../images/Oaken-Shield.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #card-4 {
-    background-image: url("/Homework/02_Portfolio/assets/images/Shakespeare-Hamlet-Poster.jpg");
+    background-image: url("../images/Shakespeare-Hamlet-Poster.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #card-5 {
-    background-image: url("/Homework/02_Portfolio/assets/images/CADL-Student-Success_Visual-Identity_Tile.jpg");
+    background-image: url("../images/CADL-Student-Success_Visual-Identity_Tile.jpg");
     background-size: cover;
     background-position: center;
 }

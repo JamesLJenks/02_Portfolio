@@ -66,9 +66,8 @@ header {
     position: fixed;
 }
 
-/* Logo */
+/* Header Logo */
 .logo {
-    cursor: pointer;
     margin-right: auto;
 }
 
@@ -101,6 +100,7 @@ header {
 
 .nav-links li a:hover {
     color: #0088a9;
+    text-decoration: underline;
 }
 
 .header-button {
@@ -123,7 +123,7 @@ button:hover {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(0,136,169,0.85), rgba(0, 43, 59, 0.85)), url("../images/camera.jpg");
+    background: linear-gradient(rgba(0,136,169,0.85), rgba(0, 59, 39, 0.85)), url("/Homework/02_Portfolio/assets/images/Keyboard.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -134,6 +134,10 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.banner-content-container {
+    color:#ecf0f1;
 }
 
 /* Main Content */
@@ -154,8 +158,9 @@ button:hover {
 .what-i-do {
     display: flex;
     justify-content: center;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #ecf0f1;
 }
 
 .services-items {
@@ -164,7 +169,7 @@ button:hover {
     background-color: #ecf0f1;
     color: black;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -193,28 +198,37 @@ button:hover {
 
 /* Section 2: About */
 .about-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
     height: auto;
     background-color: black;
-    padding-left: 2rem;
+    padding: 1.5rem;
 }
 
 .about-section p {
     color:#ecf0f1;
 }
 
+.portrait {
+    margin: 2rem;
+    width: 25%;
+    height: 25%;
+    border-radius: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .about-heading {
-    display: flex;
-    justify-content: flex-start;
     color:#ecf0f1;
-    padding: 150px 60px 0 60px;
+    padding: 0 0 1.5rem 0
 }
 
 .about-container {
-    padding: 30px 60px 150px 60px;
+    padding: 2.5rem 0 2.5rem 3rem;
     width: 50%;
-    display: flex;
-    align-items: flex-start;
 }
 
 /* Section 3: Projects */
@@ -240,7 +254,13 @@ button:hover {
 
 /* Featured portfolio project card (larger) */
 .card-feature {
-    flex-grow: 2;
+    flex: 1 0 100%;
+    padding: 1.5rem;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    cursor: pointer;
 }
 
 /* All other portfolio project cards */
@@ -251,55 +271,66 @@ button:hover {
     min-height: 100%;
     border-style: solid;
     border-width: 7px;
+    border-radius: 20px;
     border-color: #0088a9;
     padding: 12.5% 0 12.5% 0;
     background-color: #ecf0f1;
+    cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: inset 0px 0px 8px #6fd1ff, 0 0 15px #6fd1ff;
 }
 
 /* Content area for the card */
 .card-body {
-    display: flex;
-    flex-direction: column;
+    position: relative;
     background-color: #0088a9;
-    width: 33.333%;
+    width: 50%;
     padding-top: 0.5rem;
+    line-height: 1.5rem;
 }
 
 .card-header {
     color: #ecf0f1;
+    text-align: left;
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s ease-in-out;
 }
 
 .card-paragraph {
     color: #ecf0f1;
+    text-align: left;
 }
 
 /* Portfolio Card Images */
 #card-1 {
-    background-image: url("/Homework/02_Portfolio/assets/images/camera.jpg");
+    background-image: url("/Homework/02_Portfolio/assets/images/Up-North.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #card-2 {
-    background-image: url("/Homework/02_Portfolio/assets/images/camera.jpg");
+    background-image: url("/Homework/02_Portfolio/assets/images/MM-Website.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #card-3 {
-    background-image: url("/Homework/02_Portfolio/assets/images/camera.jpg");
+    background-image: url("/Homework/02_Portfolio/assets/images/Oaken-Shield.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #card-4 {
-    background-image: url("/Homework/02_Portfolio/assets/images/camera.jpg");
+    background-image: url("/Homework/02_Portfolio/assets/images/Shakespeare-Hamlet-Poster.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #card-5 {
-    background-image: url("/Homework/02_Portfolio/assets/images/camera.jpg");
+    background-image: url("/Homework/02_Portfolio/assets/images/CADL-Student-Success_Visual-Identity_Tile.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -320,7 +351,7 @@ button:hover {
   
 /* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
 .card-column {
-    flex: 1 0 100%;
+    flex: 1 0 50%;
     padding: 1.5rem;
     /* when the screen resizes, make it so our columns don't jump in size */
     transition: flex-basis 500ms linear;
@@ -331,8 +362,13 @@ button:hover {
 .contact {
     height: auto;
     text-align: center;
-    background-color: #ecf0f1;
+    color: #ecf0f1;
+    background-color: black;
     padding: 2.5rem 0 2.5rem;
+}
+
+.email {
+    color: black;
 }
 
 /* Footer */
@@ -351,17 +387,43 @@ footer {
     color: #ecf0f1;
 }
 
-/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
-@media screen and (min-width: 768px) {
-    .about-section {
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
+/* media query for larger screens */
+@media screen and (max-width: 992px) {
 }
 
-/* media query for larger screens */
-@media screen and (min-width: 992px) {
-    header {
-      width: 100%;
+/* media query for smaller screens */
+@media screen and (max-width: 768px) {
+
+    .banner-area {
+        height: 75vh;
     }
-}
+
+    .services-items {
+        flex-wrap: wrap;
+    }
+
+    .about-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    .portrait {
+        width: 60%;
+    }
+
+    .about-heading {
+        padding: 1rem 1rem 1rem 0;
+    }
+
+    .card-column {
+    flex: 1 0 100%;
+    padding: 1.5rem;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+    }
+
+    }
